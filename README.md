@@ -274,3 +274,14 @@ Router05는 url을 통해 파라미터값을 가져와서 사용하고, Router06
 > URL과 상관없이 값만 주면 어디서든 재사용 가능해서 확장성과 유지보수성이 훨씬 좋다.
 
 </aside>
+
+props를 쓰는 컴포넌트는 index.js에서 `props: true`를 해주어야 한다.
+
+```jsx
+{
+	path: 'view/:no',
+	name: 'boardview6',
+	component: BoardDetail6,
+	props: true,
+},
+```
