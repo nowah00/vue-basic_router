@@ -15,6 +15,14 @@ function moveMain() {
 function moveBoard() {
   router.push('/r04/board');
 }
+
+// 메서드로 클릭시 동작하여, 이름으로 컴포넌트를 가져온다.
+function moveMain7() {
+  router.push({ name: 'main' });
+}
+function moveBoard7() {
+  router.push({ name: 'board7' });
+}
 </script>
 
 <template>
@@ -312,6 +320,49 @@ function moveBoard() {
                     <template v-slot:label> 자유글 </template>
                   </DropDownIconMenuSlot>
                 </router-link>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- ==================== -->
+      <!-- ===== Router07 ===== -->
+      <!-- ==================== -->
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul
+          class="navbar-nav me-auto my-2 my-md-0 navbar-nav-scroll"
+          style="--bs-scroll-height: 100px"
+        >
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              모두 적용해보기
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a @click="moveMain7()" class="dropdown-item">
+                  <DropDownIconMenuSlot>
+                    <template v-slot:icon>
+                      <IconHome></IconHome>
+                    </template>
+                    <template v-slot:label> Home </template>
+                  </DropDownIconMenuSlot>
+                </a>
+              </li>
+              <li>
+                <a @click="moveBoard7()" class="dropdown-item">
+                  <DropDownIconMenuSlot>
+                    <template v-slot:icon>
+                      <IconBoard></IconBoard>
+                    </template>
+                    <template v-slot:label> 자유글 </template>
+                  </DropDownIconMenuSlot>
+                </a>
               </li>
             </ul>
           </li>

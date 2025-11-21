@@ -32,6 +32,13 @@ import TheBoardView6 from '@/views/TheBoardView6.vue';
 import BoardList6 from '@/components/router06/BoardList.vue';
 import BoardDetail6 from '@/components/router06/BoardDetail.vue';
 
+// Router07
+import TheBoardView7 from '@/views/TheBoardView7.vue';
+import BoardList7 from '@/components/router07/BoardList.vue';
+import BoardDetail7 from '@/components/router07/BoardDetail.vue';
+import BoardWrite7 from '@/components/router07/BoardWrite.vue';
+import BoardModify7 from '@/components/router07/BoardModify.vue';
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
 
@@ -148,6 +155,40 @@ const router = createRouter({
           path: 'view/:no',
           name: 'boardview6',
           component: BoardDetail6,
+          props: true,
+        },
+      ],
+    },
+    // ====================
+    // ===== Router07 =====
+    // ====================
+    // <적용해보기>
+    {
+      path: '/r07/board',
+      name: 'board7',
+      component: TheBoardView7,
+      redirect: { name: 'boardlist7' },
+      children: [
+        {
+          path: 'list',
+          name: 'boardlist7',
+          component: BoardList7,
+        },
+        {
+          path: 'view/:no',
+          name: 'boardview7',
+          component: BoardDetail7,
+          props: true,
+        },
+        {
+          path: 'write',
+          name: 'boardwrite7',
+          component: BoardWrite7,
+        },
+        {
+          path: 'modify/:no',
+          name: 'boardmodify7',
+          component: BoardModify7,
           props: true,
         },
       ],
