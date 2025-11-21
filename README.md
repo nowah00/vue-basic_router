@@ -57,7 +57,7 @@ import FileList1 from '@/components/router01/FileList.vue';
 import PictureList1 from '@/components/router01/PictureList.vue';
 ```
 
-1. `index.js`에서 router 객체에 컴포넌트의 path와 name, component를 설정한다.
+2. `index.js`에서 router 객체에 컴포넌트의 path와 name, component를 설정한다.
 
 ```jsx
     // ===== Main =====
@@ -82,7 +82,7 @@ import PictureList1 from '@/components/router01/PictureList.vue';
     },
 ```
 
-1. `App.vue`에서 `TheHeadingNavbar.vue`를 통해 ‘Home’ 클릭하면, router-link to="/" 해당 path의 컴포넌트를 `App.vue`의 <router-view> 영역에 띄운다.
+3. `App.vue`에서 `TheHeadingNavbar.vue`를 통해 ‘Home’ 클릭하면, router-link to="/" 해당 path의 컴포넌트를 `App.vue`의 <router-view> 영역에 띄운다.
 
 ```jsx
 <template>
